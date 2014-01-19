@@ -8,9 +8,95 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
+	<TextView
+        android:id="@+id/textViewResultTitleLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/resulttitle"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewResultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewResultTitleLabel"
+        android:text="@string/filler"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <com.tg.diceroller.DieButton
+        android:id="@+id/dieButton1D2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dieButton1D10"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/dieButton1D12"
+        android:onClick="onClickDieButton"
+        android:tag="2"
+        android:text="@string/d2" />
+
+    <com.tg.diceroller.DieButton
+        android:id="@+id/dieButton1D4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dieButton1D12"
+        android:layout_toLeftOf="@+id/dieButton1D20"
+        android:layout_toRightOf="@+id/dieButton1D2"
+        android:onClick="onClickDieButton"
+        android:tag="4"
+        android:text="@string/d4" />
+
+    <com.tg.diceroller.DieButton
+        android:id="@+id/dieButton1D6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dieButton1D20"
+        android:layout_alignRight="@+id/dieButton1D20"
+        android:layout_toRightOf="@+id/dieButton1D4"
+        android:onClick="onClickDieButton"
+        android:tag="6"
+        android:text="@string/d6" />
+
+    <com.tg.diceroller.DieButton
+        android:id="@+id/dieButton1D8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dieButton1D20"
+        android:layout_toRightOf="@+id/dieButton1D6"
+        android:onClick="onClickDieButton"
+        android:tag="8"
+        android:text="@string/d8" />
+        
+    <com.tg.diceroller.DieButton
+        android:id="@+id/dieButton1D10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="onClickDieButton"
+        android:tag="10"
+        android:text="@string/d10" />
+        
+    <com.tg.diceroller.DieButton
+        android:id="@+id/dieButton1D12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dieButton1D10"
+        android:layout_toRightOf="@+id/dieButton1D10"
+        android:onClick="onClickDieButton"
+        android:tag="12"
+        android:text="@string/d12" />
+
+    <com.tg.diceroller.DieButton
+        android:id="@+id/dieButton1D20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dieButton1D12"
+        android:layout_toRightOf="@+id/dieButton1D12"
+        android:onClick="onClickDieButton"
+        android:tag="20"
+        android:text="@string/d20" />
 
 </RelativeLayout>
