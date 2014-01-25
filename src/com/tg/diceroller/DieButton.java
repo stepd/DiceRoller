@@ -7,7 +7,8 @@ import android.util.AttributeSet;
 import android.widget.Button;
 
 /**
- * Die Button with the functionality to roll a die
+ * Button containing a Die and the functionality to roll it.
+ * 
  * @author Stephen Davis
  *
  */
@@ -15,12 +16,12 @@ public class DieButton extends Button {
 	
 	// Variables
 	
-	private int sides;
+	private Die die;
 	
 	// Getters/Setters
 	
 	public int getSides() {
-		return sides;
+		return die.getSides();
 	}
 	
 	// Constructors
@@ -43,10 +44,7 @@ public class DieButton extends Button {
 	// Initialize
 	
 	private void initialize(int sides) {
-		if (sides < 1)
-			this.sides = 1;
-		else
-			this.sides = sides;
+			die = new Die(sides);
 	}
 	
 	// Methods
@@ -57,6 +55,6 @@ public class DieButton extends Button {
 	 * @return integer between 1 and the number of sides on the die
 	 */
 	public int rollDie(Random rng) {
-		return rng.nextInt(sides) + 1;
+		return die.rollDie(rng);
 	}
 }
